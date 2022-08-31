@@ -1,0 +1,127 @@
+\pdfminorversion=4 % Better compatibility with Windows Adobe Acrobat Reader
+\documentclass[mathserif, aspectratio=169]{beamer}
+\mode<presentation>
+
+%% The beamer theme
+\usetheme{finsberg}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\usepackage{pythonhighlight}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\everymath{\displaystyle}
+
+
+\title
+{Example beamer presentation}
+ 
+ 
+\author
+{Henrik Finsberg}
+ 
+\institute % (optional)
+{
+  Simula Research Laboratory
+}
+ 
+\date{01.01.18}
+
+\begin{document}
+
+
+
+
+\finsbergtitlepage
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\cleanpage
+\begin{frame}
+  \frametitle{Title 1}
+  \begin{itemize}
+  \item<1-> Item 1 
+    \begin{itemize}
+    \item item 1.1
+    \item item 1.2
+    \end{itemize}
+  \item<2-> Item 2 (on page 2)
+    \begin{itemize}
+    \item item 2.1
+    \end{itemize}
+  \end{itemize}
+  \end{frame}
+
+
+
+\begin{frame}[fragile]
+  \frametitle{Some shell code}
+  \begin{block}{Here is a \textit{command}:}
+    \begin{verbatim}
+      command
+    \end{verbatim}
+  \end{block}
+
+  Way to go!
+    
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Scaled code}
+  {\fontsize{2.4}{4} \selectfont
+\begin{verbatim}
+We can also scale the code
+\end{verbatim}
+    }
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Add figures}
+  \begin{itemize}
+  \item Lets put some figures
+
+    \begin{figure}
+    \begin{minipage}{.45\textwidth}
+      \includegraphics[width=\linewidth]{simula_logo_main_RGB}
+      \caption{foo}
+    \end{minipage}\hfill
+    \begin{minipage}{.45\textwidth}
+      \includegraphics[width=\linewidth]{simula_logo_main_RGB}
+      \caption{bar}
+    \end{minipage}
+    \end{figure}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Put figures in using veter}
+
+  \begin{center}
+  \includegraphics[width=0.45\textwidth]{simula_logo_main_RGB}
+  \includegraphics[width=0.45\textwidth]{simula_logo_main_RGB}
+  \end{center}
+
+\end{frame}
+        
+
+\logopage
+\begin{frame}[fragile]
+  \frametitle{Questions?}
+  Done
+\end{frame}
+%-------------------------------------------------------------------------------
+
+\end{document}
